@@ -72,7 +72,7 @@ router.get('/', authenticateToken, async (req: Request, res: Response) => {
 
         // Helper to normalize symbol
         const normalize = (sym: string) => {
-            return sym.replace(/m$/, '').replace(/\.pro$/, '').replace(/\.ecn$/, '');
+            return sym.replace(/m$/, '').replace(/\.pro$/, '').replace(/\.ecn$/, '').replace(/\.s$/, '').replace(/\.r$/, '').replace(/\.e$/, '');
         };
 
         // Flatten favorite status and sort order AND merge details
